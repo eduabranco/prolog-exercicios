@@ -45,8 +45,8 @@ tio(Y,Z) :- gerou(W,Z),
 tia(X,Z) :- gerou(W,Z), 
             irma(X,W).
 
-avou(Y,Z) :- pai(Y,Z) , 
-             gerou(Z,Y).
+avou(Y,Z) :- pai(Y,W) , 
+             gerou(W,Z).
 
-avoo(X,Z) :- mae(X,Z) , 
-             gerou(Z,Y).
+avoo(X,Z) :- mae(X,W) , 
+             gerou(W,Z).
