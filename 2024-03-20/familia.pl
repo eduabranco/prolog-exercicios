@@ -22,10 +22,12 @@ pai(gil,ary).
 pai(rai,noe).
 pai(ary,gal).
 
-gerou(Z,M) :- pai(Z,M) ; mae(Z,M).
+gerou(Z,M) :- pai(Z,M).
+gerou(Z,M) :- mae(Z,M).
 
 casal (X,Y) :- gerou(X,N) ,
-               gerou(Y,N).
+               gerou(Y,N),
+               X\=Y.
 
 feliz(z) :- gerou(Z,W).
 
